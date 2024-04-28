@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper & Scissors</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"  rel="stylesheet">
 </head>
 <body>
     <section class="container">
-        <img src="img/rock_icon.png">
-        <img src="img/paper_icon.png">
-        <img src="img/scissor_icon.png">
+        <img class="container__choice-img" src="img/rock_icon.png" alt="rock">
+        <img class="container__choice-img" src="img/paper_icon.png" alt="paper">
+        <img class="container__choice-img" src="img/scissor_icon.png" alt="scissors">
         <figure class="score--self">
-            <p>0</p>
+            <p id="displayed-userscore">0</p>
         </figure>
         <figure class="score--opp">
-            <p>0</p>
+            <p id="displayed-oppscore">0</p>
         </figure>
+        <img id="choice--rock" class="container__choice-img" src="img/rock_icon.png" alt="rock">
+        <img id="choice--paper" class="container__choice-img" src="img/paper_icon.png" alt="paper">
+        <img id="choice--scissors" class="container__choice-img" src="img/scissor_icon.png" alt="scissors">
+        <div></div>
+        <section class="ui">
+            <p id="label">Write your command:</p>
+            <input id="user-input" type="text" placeholder="Enter rock, paper, scissors; or click image">
+            <button class="enter-button">Enter</button>
+        </section>
     </section>
     <script src="script.js"></script>
 </body>

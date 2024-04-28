@@ -11,7 +11,14 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
 }
+
+.jersey-10-regular {
+    
+    
+  }
 
 .container {
     display: grid;
@@ -19,37 +26,98 @@ body {
     grid-template-rows: repeat(3, 1fr);
     border: solid 1vw;
     box-shadow: 10px 10px 5px;
-    width: 75vw;
-    height:75vw;
+    width: 75vmin;
+    height: 75vmin;
     min-width: 250px;
     min-height: 250px;
     align-items: center;
-
+    justify-content: center;
 }
 
-.container>img {
-    width: 15vw;
-    
+.container__choice-img {
+    width: 15vmin;
+    min-width: 50px;
+    margin: 0 auto;
+}
+
+#choice--rock:hover,
+#choice--paper:hover,
+#choice--scissors:hover {
+    border-bottom: 10px solid white;
+    cursor: pointer;
 }
 
 .score--self {
     position: absolute;
-    bottom: 0;
     left: 0;
+    bottom: 0;
 }
 
 .score--opp {
     position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.score--self p {
+    bottom: 0;
+    left: 0;
+    font-size: 120px;
+    margin: 0;
+}
+
+.score--opp p{
     top: 0;
     right: 0;
+    font-size: 120px;
+    margin: 0;
+}
+
+.ui {
+    display: flex;
+    flex-direction: column;
+}
+
+#label {
+    font-size: 16px;
+    margin: 0;
+}
+
+#user-input {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px black;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+#user-input:focus {
+    outline: none;
+    border: 3px solid black;
+}
+
+.enter-button {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 19px;
+    margin: 0;
+    align-self: center;
+    width: 50px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 2px 2px 1px;
 }
 
 /* tablet screens */
-@media screen and (min-width: 432px) and (max-width: 962px) {
-
+@media screen and (min-width: 450px) and (max-width: 962px) {
+    #label {
+        font-size: 20px;
+    }
 }
 
 /* desktop screens */
 @media screen and (min-width: 963px) {
-
+    #label {
+        font-size: 20px;
+    }
 }
