@@ -1,0 +1,55 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: solid 1vw;
+    box-shadow: 10px 10px 5px;
+    width: 75vw;
+    height:75vw;
+    min-width: 250px;
+    min-height: 250px;
+    align-items: center;
+
+}
+
+.container>img {
+    width: 15vw;
+    
+}
+
+.score--self {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.score--opp {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* tablet screens */
+@media screen and (min-width: 432px) and (max-width: 962px) {
+
+}
+
+/* desktop screens */
+@media screen and (min-width: 963px) {
+
+}
