@@ -17,31 +17,22 @@ body {
 
 .container {
     display: grid;
-    background-color: black;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     border: solid 1vw;
     box-shadow: 10px 10px 5px;
     width: 75vmin;
-    height: 80vmin;
+    height: 75vmin;
     min-width: 250px;
     min-height: 250px;
     align-items: center;
     justify-content: center;
-    gap: 5px;
 }
 
-.container__choice {
-    margin: auto;
-    width: 90%;
-    height: 90%;
-    font-size: 20vmin;
-    text-align: center;
-    background-color: white;
-}
-
-.container__choice:hover {
-    cursor: pointer;
+.container__choice-img {
+    width: 15vmin;
+    min-width: 50px;
+    margin: 0 auto;
 }
 
 #choice--rock:hover,
@@ -79,25 +70,20 @@ body {
 
 .ui {
     display: flex;
-    flex-direction: row;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-start: 4;
+    flex-direction: column;
 }
 
 #label {
-    color: white;
     font-size: 16px;
-    margin: 10px;
+    margin: 0;
 }
 
 #user-input {
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 4px 4px 4px black;
     padding-left: 10px;
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
 #user-input:focus {
@@ -108,9 +94,9 @@ body {
 .enter-button {
     font-family: "Jersey 10", sans-serif;
     font-size: 19px;
-    margin: 10px;
+    margin: 0;
     align-self: center;
-    width: 100px;
+    width: 50px;
     height: 25px;
     border-radius: 10px;
     border: 1px solid;
@@ -121,7 +107,6 @@ body {
     position: absolute;
     /* display set to none until someone wins*/
     display: none;
-    background-color: rgba(100, 100, 100, 0.9);
 }
 
 #result-statement {
@@ -133,7 +118,7 @@ body {
     text-align: center;
     line-height: 50px;
     font-size: max(16vw, 50px);
-    background-color: rgba(100, 100, 100, 0.9);
+    background-color: rgba(100, 100, 100, 0.5);
     box-shadow: 4px 4px 4px black;
     width: 90%;
     height: 30%;
