@@ -15,9 +15,11 @@ const rockChoice = document.querySelector("#choice--rock");
 const paperChoice = document.querySelector("#choice--paper");
 const scissorsChoice = document.querySelector("#choice--scissors");
 
+//get elements for scores
 const userScoreDisplay = document.querySelector("#displayed-userscore");
 const oppScoreDisplay = document.querySelector("#displayed-oppscore");
 
+//add eventlisteners
 enterBtn.addEventListener('click', () => game(inputBox.value.toLowerCase()));
 rockChoice.addEventListener('click', () => game('rock'))
 paperChoice.addEventListener('click', () => game('paper'))
