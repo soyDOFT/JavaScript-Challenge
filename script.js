@@ -1,12 +1,16 @@
+//initialize user and opp score
 let userScore = 0;
 let oppScore = 0;
 
+//store choices
 const choices = ['rock', 'paper', 'scissors']
 
+//get elements for input, button, and score
 const enterBtn = document.querySelector(".enter-button");
 const inputBox = document.querySelector("#user-input");
 const selfScore = document.querySelector(".score--self");
 
+//get elements for rock paper and scissors
 const rockChoice = document.querySelector("#choice--rock");
 const paperChoice = document.querySelector("#choice--paper");
 const scissorsChoice = document.querySelector("#choice--scissors");

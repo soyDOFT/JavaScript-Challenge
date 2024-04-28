@@ -1,8 +1,10 @@
+//store user score
 let userScore = 0;
 let oppScore = 0;
 const grid = [0, 0, 0,
               0, 0, 0,
               0, 0, 0,]
+// array conversion
 const conversion = {
     0: "-1-1",
     1: "-1-2",
@@ -14,7 +16,7 @@ const conversion = {
     7: "-3-2",
     8: "-3-3",
 }
-
+//get document elements
 const square1x1 = document.getElementById("choice-1-1");
 const square1x2 = document.getElementById("choice-1-2");
 const square1x3 = document.getElementById("choice-1-3");
