@@ -11,28 +11,30 @@
 </head>
 <body>
     <section class="container">
-        <img id="choice--cpu--rock" class="container__choice-img" src="img/rock_icon.png" alt="rock">
-        <img id="choice--cpu--paper" class="container__choice-img" src="img/paper_icon.png" alt="paper">
-        <img id="choice--cpu--scissors" class="container__choice-img" src="img/scissor_icon.png" alt="scissors">
+        <p id="choice-1-1" class="container__choice"></p>
+        <p id="choice-1-2" class="container__choice"></p>
+        <p id="choice-1-3" class="container__choice"></p>
+        <p id="choice-2-1" class="container__choice"></p>
+        <p id="choice-2-2" class="container__choice"></p>
+        <p id="choice-2-3" class="container__choice"></p>
+        <p id="choice-3-1" class="container__choice"></p>
+        <p id="choice-3-2" class="container__choice"></p>
+        <p id="choice-3-3" class="container__choice"></p>
         <figure class="score--self">
             <p id="displayed-userscore">0</p>
         </figure>
         <figure class="score--opp">
             <p id="displayed-oppscore">0</p>
         </figure>
-        <img id="choice--rock" class="container__choice-img" src="img/rock_icon.png" alt="rock">
-        <img id="choice--paper" class="container__choice-img" src="img/paper_icon.png" alt="paper">
-        <img id="choice--scissors" class="container__choice-img" src="img/scissor_icon.png" alt="scissors">
-        <div><!-- empty div to separate grid content --></div>
         <section class="ui">
             <p id="label">Write your command:</p>
-            <input id="user-input" type="text" placeholder="Enter rock, paper, scissors; or click image">
+            <input id="user-input" type="text" placeholder="click square to play or use a commmand">
             <button class="enter-button">Enter</button>
         </section>
     </section>
     <section class="container" id="result-popup">
-        <p id="result-statement">TIE!</p>
+        <p id="result-statement">YOU TIED!</p>
     </section>
-    <script src="script.js"></script>
+    <script src="tictactoe.js"></script>
 </body>
 </html>
