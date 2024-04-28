@@ -67,6 +67,7 @@ function displayResult(status) {
     resultPopup.style.display = "flex";
 }
 
+//place X on board
 function placeX(index) {
     const square = document.getElementById("choice" + conversion[index]);
     console.log("choice" + conversion[index]);
@@ -75,6 +76,7 @@ function placeX(index) {
     checkWin(index);
 }
 
+//place O on board
 function placeO(random) {
     const square = document.getElementById("choice" + conversion[random]);
     console.log("choice" + conversion[random]);
@@ -83,6 +85,7 @@ function placeO(random) {
     checkWin(random);
 }
 
+//check if won game
 function checkWin(index) {
     switch (index) {
         case 0:
@@ -185,6 +188,7 @@ function checkWin(index) {
     }
 }
 
+//check if cpu won
 function checkCPUWin(random) {
         switch (random) {
             case 0:

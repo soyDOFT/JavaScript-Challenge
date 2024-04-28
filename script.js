@@ -91,12 +91,14 @@ function lose() {
     displayResult("YOU LOSE!");
     setTimeout(() => clearResult(), 1000);
 
+    //increment score
     oppScore++;
     oppScoreDisplay.innerHTML = oppScore;
     scoreStatus();
 }
 
 function tie() {
+    //display tie statement
     displayResult("YOU TIED!");
     setTimeout(() => clearResult(), 1000);
 
