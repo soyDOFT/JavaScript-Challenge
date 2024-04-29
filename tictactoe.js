@@ -192,14 +192,14 @@ function checkWin(index) {
         }
         case 8: {
             const grid8 = grid[8];
-            if (grid8 === -1 || grid8 === 1) {
+            if (grid8 === -1 || grid8 === 0) {
                 break;
             } else if (grid8 === grid[7] && grid8 === grid[6]) {
                 win();
             } else if (grid8 === grid[5] && grid8 === grid[2]) {
-                    win();
-            } else if (grid8 === grid[4] && grid8=== grid[1]) {
-                    win();
+                win();
+            } else if (grid8 === grid[4] && grid8=== grid[0]) {
+                win();
             }
             break;
         }
@@ -225,7 +225,7 @@ function checkLose(random) {
         }
         case 1: {
             const grid1 = grid[1];
-            if (grid1 === -1 || grid1 && grid1 === 0) {
+            if (grid1 === 1 || grid1 && grid1 === 0) {
                 break;
             } else if (grid1 === grid[0] && grid1 === grid[2]) {
                 lose();
@@ -310,13 +310,13 @@ function checkLose(random) {
         }
         case 8: {
             const grid8 = grid[8];
-            if (grid8 === 1 || grid8 === 1) {
+            if (grid8 === 1 || grid8 === 0) {
                 break;
             } else if (grid8 === grid[7] && grid8 === grid[6]) {
                 lose();
             } else if (grid8 === grid[5] && grid8 === grid[2]) {
                 lose();
-            } else if (grid8 === grid[4] && grid8=== grid[1]) {
+            } else if (grid8 === grid[4] && grid8=== grid[0]) {
                 lose();
             }
             break;
