@@ -107,7 +107,7 @@ function checkWin(index) {
         }
         case 1: {
             const grid1 = grid[1];
-            if (grid1 === -1 || grid1 && grid1 === 0) {
+            if (grid1 === -1 || grid1 === 0) {
                 break;
             } else if (grid1 === grid[0] && grid1 === grid[2]) {
                 win();
@@ -225,7 +225,7 @@ function checkLose(random) {
         }
         case 1: {
             const grid1 = grid[1];
-            if (grid1 === 1 || grid1 && grid1 === 0) {
+            if (grid1 === 1 || grid1 === 0) {
                 break;
             } else if (grid1 === grid[0] && grid1 === grid[2]) {
                 lose();
