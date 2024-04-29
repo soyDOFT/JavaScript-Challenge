@@ -43,14 +43,18 @@ function game(index) {
     if (grid[index] === 0) {
          // change grid array to reflect new move
         placeX(index);
-
+        const isTie = checkTie();
         //computer randomly selects a tictactoe box number
         //validate cpu turn
         let random = 0;
-        do {
-            random = Math.floor(Math.random() * grid.length);
-        } while (grid[random] !== 0)
-        placeO(random);
+        
+        if (!isTie) {
+            do {
+                random = Math.floor(Math.random() * grid.length);
+            } while (grid[random] !== 0)
+
+            placeO(random);
+        }
 
     } else {
         displayResult("SPOT TAKEN!");
@@ -107,7 +111,7 @@ function checkWin(index) {
         }
         case 1: {
             const grid1 = grid[1];
-            if (grid1 === -1 || grid1 && grid1 === 0) {
+            if (grid1 === -1 || grid1 === 0) {
                 break;
             } else if (grid1 === grid[0] && grid1 === grid[2]) {
                 win();
@@ -192,14 +196,14 @@ function checkWin(index) {
         }
         case 8: {
             const grid8 = grid[8];
-            if (grid8 === -1 || grid8 === 1) {
+            if (grid8 === -1 || grid8 === 0) {
                 break;
             } else if (grid8 === grid[7] && grid8 === grid[6]) {
                 win();
             } else if (grid8 === grid[5] && grid8 === grid[2]) {
-                    win();
-            } else if (grid8 === grid[4] && grid8=== grid[1]) {
-                    win();
+                win();
+            } else if (grid8 === grid[4] && grid8=== grid[0]) {
+                win();
             }
             break;
         }
@@ -225,7 +229,7 @@ function checkLose(random) {
         }
         case 1: {
             const grid1 = grid[1];
-            if (grid1 === -1 || grid1 && grid1 === 0) {
+            if (grid1 === 1 || grid1 === 0) {
                 break;
             } else if (grid1 === grid[0] && grid1 === grid[2]) {
                 lose();
@@ -310,13 +314,13 @@ function checkLose(random) {
         }
         case 8: {
             const grid8 = grid[8];
-            if (grid8 === 1 || grid8 === 1) {
+            if (grid8 === 1 || grid8 === 0) {
                 break;
             } else if (grid8 === grid[7] && grid8 === grid[6]) {
                 lose();
             } else if (grid8 === grid[5] && grid8 === grid[2]) {
                 lose();
-            } else if (grid8 === grid[4] && grid8=== grid[1]) {
+            } else if (grid8 === grid[4] && grid8=== grid[0]) {
                 lose();
             }
             break;
@@ -327,10 +331,11 @@ function checkLose(random) {
 function checkTie() {
     if (!grid.includes(0)) {
         displayResult("YOU TIED!!");
-        setTimeout(() => removePopup, 1000);
+        setTimeout(() => clearResult(), 1000);
         setTimeout(() => restart(), 2000);
+        return true;
     }
-    
+    return false;
 }
 
 function win() {
