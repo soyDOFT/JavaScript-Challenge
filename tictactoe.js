@@ -43,14 +43,18 @@ function game(index) {
     if (grid[index] === 0) {
          // change grid array to reflect new move
         placeX(index);
-
+        const isTie = checkTie();
         //computer randomly selects a tictactoe box number
         //validate cpu turn
         let random = 0;
-        do {
-            random = Math.floor(Math.random() * grid.length);
-        } while (grid[random] !== 0)
-        placeO(random);
+        
+        if (!isTie) {
+            do {
+                random = Math.floor(Math.random() * grid.length);
+            } while (grid[random] !== 0)
+
+            placeO(random);
+        }
 
     } else {
         displayResult("SPOT TAKEN!");
@@ -327,10 +331,11 @@ function checkLose(random) {
 function checkTie() {
     if (!grid.includes(0)) {
         displayResult("YOU TIED!!");
-        setTimeout(() => removePopup, 1000);
+        setTimeout(() => clearResult(), 1000);
         setTimeout(() => restart(), 2000);
+        return true;
     }
-    
+    return false;
 }
 
 function win() {
